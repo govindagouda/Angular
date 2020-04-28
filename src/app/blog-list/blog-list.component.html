@@ -1,0 +1,5 @@
+<p>blog-list works!</p>
+<app-blog-post *ngFor="let blog of blogs[currentpage]" [blog]="blog" #tile></app-blog-post>
+
+<a href="#" class="btn btn-primary" (click)="expandAll()" > Expand All</a>
+<app-paginator [numberofpages]="blogs.length" (pageNumberClicked)="updatePage($event)"></app-paginator>
